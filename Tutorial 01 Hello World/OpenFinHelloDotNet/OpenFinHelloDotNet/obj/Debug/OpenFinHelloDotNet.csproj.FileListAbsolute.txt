@@ -1,0 +1,22 @@
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.csprojAssemblyReference.cache
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.csproj.CoreCompileInputs.cache
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\OpenFinHelloDotNet.exe.config
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\OpenFinHelloDotNet.exe
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\OpenFinHelloDotNet.pdb
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\Ionic.Zip.dll
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\Newtonsoft.Json.dll
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\OpenfinDesktop.dll
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\WebSocket4Net.dll
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\Ionic.Zip.xml
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\Newtonsoft.Json.xml
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\OpenfinDesktop.xml
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.csproj.CopyComplete
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.exe
+c:\users\anthony\source\repos\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.pdb
+C:\Users\imranm\Documents\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\OpenFinHelloDotNet.exe.config
+C:\Users\imranm\Documents\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\OpenFinHelloDotNet.exe
+C:\Users\imranm\Documents\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\OpenFinHelloDotNet.pdb
+C:\Users\imranm\Documents\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.csproj.CoreCompileInputs.cache
+C:\Users\imranm\Documents\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.exe
+C:\Users\imranm\Documents\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.pdb
+C:\Users\imranm\Documents\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.csprojResolveAssemblyReference.cache
