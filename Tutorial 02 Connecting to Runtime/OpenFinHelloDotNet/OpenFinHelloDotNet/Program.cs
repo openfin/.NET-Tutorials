@@ -15,6 +15,7 @@ namespace OpenFinHelloDotNet
 
        Console.WriteLine("Hello Dot Net World");
        AutoResetEvent sync = new AutoResetEvent(false);
+       //Allows the program to wait, setting the initial state to false
            
       var runtimeOptions = new RuntimeOptions
       {
@@ -31,6 +32,7 @@ namespace OpenFinHelloDotNet
     
       });
       sync.WaitOne();
+
     }
   }
 }

@@ -1645,6 +1645,41 @@
             An application has crashed.
             </summary>
         </member>
+        <member name="F:Openfin.Desktop.ApplicationEventType.ManifestChanged">
+            <summary>
+            A manifest has changed.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.ApplicationEventType.TrayIconClicked">
+            <summary>
+            A try icon was clicked.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.ApplicationEventType.WindowCrashed">
+            <summary>
+            A windows has crashed.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.ApplicationEventType.WindowEndLoaded">
+            <summary>
+            A windows content was loaded.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.ApplicationEventType.WindowOutOfMemory">
+            <summary>
+            A process ran out of memory.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.ApplicationEventType.WindowReloaded">
+            <summary>
+            A windows content was reloaded.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.ApplicationEventType.WindowStartLoad">
+            <summary>
+            A windows contet has started loading.
+            </summary>
+        </member>
         <member name="T:Openfin.Desktop.ApplicationEventArgs">
             <summary>
             Provides data for common OpenFin application events.
@@ -1684,6 +1719,26 @@
         <member name="T:Openfin.Desktop.DesktopSessionChangedEventArgs">
             <summary>
             Provides data for a desktop session change event.
+            </summary>
+        </member>
+        <member name="T:Openfin.Desktop.PreloadScriptsEvaluatedEventArgs">
+            <summary>
+            Provides data for the PreloadScriptEvaluatedEvent.
+            </summary>
+        </member>
+        <member name="P:Openfin.Desktop.PreloadScriptsEvaluatedEventArgs.PreloadScripts">
+            <summary>
+            Gets the collection all preload scripts and their final state when the window was loaded.
+            </summary>
+        </member>
+        <member name="T:Openfin.Desktop.PreloadScriptStateChangedEventArgs">
+            <summary>
+            Provides data for the PreloadScriptStateChanged event.
+            </summary>
+        </member>
+        <member name="P:Openfin.Desktop.PreloadScriptStateChangedEventArgs.PreloadScript">
+            <summary>
+            Gets the preload script that has changed state.
             </summary>
         </member>
         <member name="T:Openfin.Desktop.ResourceLoadFailedEventArgs">
@@ -1838,6 +1893,21 @@
             - Ctrl + 0 restores the zoom level to 100%
             </remarks>
         </member>
+        <member name="T:Openfin.Desktop.CustomRequestHeader">
+            <summary>
+            A Class storing information about a custom request header.
+            </summary>
+        </member>
+        <member name="P:Openfin.Desktop.CustomRequestHeader.UrlPatterns">
+            <summary>
+            List of URL patterns.
+            </summary>
+        </member>
+        <member name="P:Openfin.Desktop.CustomRequestHeader.Headers">
+            <summary>
+            List of headers (key:value)
+            </summary>
+        </member>
         <member name="T:Openfin.Desktop.PreloadScript">
             <summary>
             A class representing a preload script entry for a given Openfin Application or Window
@@ -1868,6 +1938,46 @@
             Setting this property to <see langword="true"/> allows the OpenFin Window to load
             even if the specified preload script fails to load from the specified URL.
             </remarks>
+        </member>
+        <member name="P:Openfin.Desktop.PreloadScript.State">
+            <summary>
+            Gets the load or execution state of the preload script during a state change event.
+            </summary>
+        </member>
+        <member name="T:Openfin.Desktop.PreloadScriptState">
+            <summary>
+            Specifies the load and evaluation state of a preload script.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.PreloadScriptState.Unknown">
+            <summary>
+            The preload script is in an uknown state.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.PreloadScriptState.Loading">
+            <summary>
+            The Runtime has started loading the preload script.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.PreloadScriptState.LoadFailed">
+            <summary>
+            The preload script has failed to load.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.PreloadScriptState.Loaded">
+            <summary>
+            The preload script has loaded successfully.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.PreloadScriptState.EvaluationFailed">
+            <summary>
+            The preload script failed to evaluate.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.PreloadScriptState.Evaluated">
+            <summary>
+            The preload script was evaluated successfully.
+            </summary>
         </member>
         <member name="T:Openfin.Desktop.Shortcut">
             <summary>
@@ -2349,6 +2459,51 @@
         <member name="F:Openfin.Desktop.WindowEventType.ResourceLoadFailed">
             <summary>
             Resources for web content failed to load.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.WindowEventType.Crashed">
+            <summary>
+            A window has crashed.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.WindowEventType.Embedded">
+            <summary>
+            A window was embedded.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.WindowEventType.ExternalProcessStarted">
+            <summary>
+            An external process waas started.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.WindowEventType.ExternalProcessExited">
+            <summary>
+            An external process has exited.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.WindowEventType.NavigationRejected">
+            <summary>
+            Navigation was rejected.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.WindowEventType.OutOfMemory">
+            <summary>
+            Application ran out of memory.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.WindowEventType.PreloadScriptsEvaluated">
+            <summary>
+            Preload script status has changed.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.WindowEventType.PreloadScriptStateChanged">
+            <summary>
+            Preload script status is changing.
+            </summary>
+        </member>
+        <member name="F:Openfin.Desktop.WindowEventType.Reloaded">
+            <summary>
+            A Windows was reloaded.
             </summary>
         </member>
         <member name="T:Openfin.Desktop.WindowNavigationRejectedEventArgs">
@@ -3089,6 +3244,41 @@
             Occurs when a window is responding following a not responding event.
             </summary>
         </member>
+        <member name="E:Openfin.Desktop.Application.ManifestChanged">
+            <summary>
+            Occurs when a manifest has been changed.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Application.TrayIconClicked">
+            <summary>
+            Occurs when a try icon has been clicked.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Application.WindowCrashed">
+            <summary>
+            Occurs when a window has crashed.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Application.WindowEndLoaded">
+            <summary>
+            Occurs when a window ended loading.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Application.WindowOutOfMemory">
+            <summary>
+            Occurs when a process ran out of memory.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Application.WindowReloaded">
+            <summary>
+            Occurs when a window was reloaded.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Application.WindowStartLoad">
+            <summary>
+            Occurs when a window started loading.
+            </summary>
+        </member>
         <member name="M:Openfin.Desktop.Application.initialize">
             <summary>
                 Allocates and prepares internal JObjects and wraps the Applications main window.
@@ -3689,6 +3879,21 @@
             Enables PPAPI plugins (Flash) for this application.
             </summary>
         </member>
+        <member name="P:Openfin.Desktop.ApplicationOptions.WebSecurity">
+            <summary>
+            When set to false it will disable the same-origin policy for the application.
+            </summary>
+        </member>
+        <member name="P:Openfin.Desktop.ApplicationOptions.LoadErrorMessage">
+            <summary>
+            An error message to display when the application (launched via manifest) fails to load.
+            </summary>
+        </member>
+        <member name="P:Openfin.Desktop.ApplicationOptions.DisableIabSecureLogging">
+            <summary>
+            An error message to display when the application (launched via manifest) fails to load.
+            </summary>
+        </member>
         <member name="M:Openfin.Desktop.ManifestUtils.ConvertPathToUriString(System.String)">
             <summary>
             Normalizes a string to a valid system path string. Returns an empty string when path is empty and null when path is null.
@@ -4023,6 +4228,11 @@
         <member name="P:Openfin.Desktop.RuntimeOptions.RuntimeConnectTimeout">
             <summary>
             Duration of time, in milliseconds, to wait for a successful connection to the runtime. Default is 10 seconds.
+            </summary>
+        </member>
+        <member name="P:Openfin.Desktop.RuntimeOptions.OverrideConfigUrl">
+            <summary>
+            Enables to update the location of application manifest to a new location.
             </summary>
         </member>
         <member name="M:Openfin.Desktop.RuntimeOptions.LoadDefault">
@@ -8565,6 +8775,51 @@
             Occurs when a window is requesting to be shown.
             </summary>
         </member>
+        <member name="E:Openfin.Desktop.Window.Crashed">
+            <summary>
+            Occurs when the window has creashed.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Window.Embedded">
+            <summary>
+            Occurs when the window was embedded.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Window.ExternalProcessStarted">
+            <summary>
+            Occurs when the external prcess was started.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Window.ExternalProcessExited">
+            <summary>
+            Occurs when the external prcess has exited.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Window.NavigationRejected">
+            <summary>
+            Occurs when navigation was rejected.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Window.OutOfMemory">
+            <summary>
+            Occurs when the process ran out of memory.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Window.PreloadScriptsEvaluated">
+            <summary>
+            Occurs when the Runtime has attempted to evaluate all preload scripts for the window.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Window.PreloadScriptStateChanged">
+            <summary>
+            Occurs when a preload script has changed state.
+            </summary>
+        </member>
+        <member name="E:Openfin.Desktop.Window.Reloaded">
+            <summary>
+            Occurs when the window has been reloaded.
+            </summary>
+        </member>
         <member name="P:Openfin.Desktop.Window.Handle">
             <summary>
             Gets the window handle of the OpenFin window
@@ -9881,6 +10136,16 @@
         <member name="P:Openfin.Desktop.WindowOptions.WaitForPageLoadToRender">
             <summary>
             Determines if OpenFin will wait for DomContent Loaded to display the window.
+            </summary>
+        </member>
+        <member name="P:Openfin.Desktop.WindowOptions.SmallWindow">
+            <summary>
+            Determines if window can be smaller than 41x46 px.
+            </summary>
+        </member>
+        <member name="P:Openfin.Desktop.WindowOptions.CustomRequestHeaders">
+            <summary>
+            Defines list of custom request headers for requests sent by the window.
             </summary>
         </member>
         <member name="T:Openfin.UIComponents.IEmbeddedView">
