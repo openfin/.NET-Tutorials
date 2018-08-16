@@ -1,5 +1,6 @@
-# .NET-Tutorials
-Tutorials exploring the features available with the OpenFin .NET adapter and WPF embedded view
+# .NET-Tutorials 
+
+Tutorials exploring the features available with the OpenFin .NET adapter as referenced in the internal wiki found here: https://github.com/openfin/Internal-Wiki/wiki/Support:-The-.NET-Tutorial
 
 ## Requirements
 
