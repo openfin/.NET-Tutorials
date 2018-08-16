@@ -20,3 +20,10 @@ C:\Users\imranm\Documents\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World
 C:\Users\imranm\Documents\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.exe
 C:\Users\imranm\Documents\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.pdb
 C:\Users\imranm\Documents\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.csprojResolveAssemblyReference.cache
+C:\Users\imranm\Documents\MyGitHub\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\OpenFinHelloDotNet.exe.config
+C:\Users\imranm\Documents\MyGitHub\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\OpenFinHelloDotNet.exe
+C:\Users\imranm\Documents\MyGitHub\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\bin\Debug\OpenFinHelloDotNet.pdb
+C:\Users\imranm\Documents\MyGitHub\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.csprojAssemblyReference.cache
+C:\Users\imranm\Documents\MyGitHub\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.csproj.CoreCompileInputs.cache
+C:\Users\imranm\Documents\MyGitHub\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.exe
+C:\Users\imranm\Documents\MyGitHub\Learning DotNet\.NET-Tutorials\Tutorial 01 Hello World\OpenFinHelloDotNet\OpenFinHelloDotNet\obj\Debug\OpenFinHelloDotNet.pdb
