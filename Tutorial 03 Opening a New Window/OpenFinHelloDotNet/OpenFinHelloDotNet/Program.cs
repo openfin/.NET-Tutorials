@@ -1,9 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
 using Openfin.Desktop;
 
 namespace OpenFinHelloDotNet
@@ -15,11 +10,11 @@ namespace OpenFinHelloDotNet
         {
 
             Console.WriteLine("Hello Dot Net World");
-            AutoResetEvent sync = new AutoResetEvent(false);
+           
 
             var runtimeOptions = new RuntimeOptions
             {
-                Version = "stable"
+                Version = "9.61.34.25"
             };
 
             var runtime = Runtime.GetRuntimeInstance(runtimeOptions);
@@ -38,18 +33,17 @@ namespace OpenFinHelloDotNet
 
                 var application = runtime.CreateApplication(appOptions);
                 application.run((a) =>
-          {
+                {
 
-                  Console.WriteLine("app started.");
-              },
-          (n) =>
-          {
-              });
+                 Console.WriteLine("app started.");
+            
+                },
+                (n) =>
+                {
+                });
             });
+                 Console.Read();
+        }
 
-        
-
-      sync.WaitOne();
-    }
   }
 }
