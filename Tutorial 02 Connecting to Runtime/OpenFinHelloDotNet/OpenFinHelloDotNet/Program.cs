@@ -8,7 +8,7 @@ namespace OpenFinHelloDotNet
     static void Main(string[] args)
     {
 
-      Console.WriteLine("Hello Dot Net World");
+      Console.WriteLine("Hello welcome to Tutorial 2");
            
       var runtimeOptions = new RuntimeOptions
       {
