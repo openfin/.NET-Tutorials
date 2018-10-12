@@ -14,7 +14,7 @@ namespace OpenFinHelloDotNet
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Hello Dot Net World");
+            Console.WriteLine("Inter Application Bus Example");
            
 
             var runtimeOptions = new RuntimeOptions
@@ -30,10 +30,6 @@ namespace OpenFinHelloDotNet
                 {
                     Console.WriteLine(e.Message);
                 };
-
-                //To subscribe to this topic, create a new application and publish a message to "OpenFinTopic"
-
-                //fin.desktop.InterApplicationBus.publish("OpenFinTopic","value1");
 
                 Console.WriteLine("The runtime has now connected.");
 
