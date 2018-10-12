@@ -8,6 +8,7 @@ namespace OpenFinHelloDotNet
     {
 
        Console.WriteLine("Hello OpenFin Dot Net");
+            Console.WriteLine("The .NET Adapter");
             Console.ReadKey();
     }
   }
