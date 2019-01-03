@@ -1,17 +1,15 @@
 
 ## Tutorial 01 Connecting to the runtime
 
-### Tutorial 1
-
-#### Objective
+### Objective
 
 By the end of this tutorial you should be able to understand how the .NET adapter is used to start and connect to OpenFin Runtime instance, which is the basis of the interaction between a .NET application and OpenFin.
 
-#### Where to start
+### Where to start
 
 Load the 'OpenFinHello\OpenFinHelloDotNet.sln' project in visual studio.  Select the Program.cs file from the solution explorer.
 
-#### What is happening?
+### What is happening?
 
 The .NET application is using the OpenFin .NET adapter to create, and connect to, an OpenFin Runtime instance.
 

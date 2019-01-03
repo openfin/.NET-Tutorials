@@ -1,16 +1,19 @@
 
-## Tutorial 03 Opening a New Window
+## Tutorial 02 Opening a New Window
 
+### Objective
 
-This tutorial will guide you through on how to open a new OpenFin window via the .NET adapter.  Below are the steps required to achieve this:
+By the end of this tutorial you should be able to understand how to configure and open, an OpenFins apllication main window from .NET .
+
+### Where to start
+
+Load the 'OpenFinHello\OpenFinHelloDotNet.sln' project in visual studio.  Select the Program.cs file from the solution explorer.
+
+### What is happening?
 
 **1st Step**
 
-Use the `ApplicationOptions` class to construct an instance configuring a new JObject with the passed values.
-
->
-
-This consists of the following:
+The `ApplicationOptions` class is used to build the parmaters that would normally be configured in an OpenFins Application configuration startup_app object, see: https://openfin.co/documentation/application-config/ .  The `ApplicationOptions` class is intaciated with a JObject conatining the required values:
 
 ```
 public ApplicationOptions(
