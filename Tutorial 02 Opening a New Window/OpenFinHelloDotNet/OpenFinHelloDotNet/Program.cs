@@ -10,7 +10,6 @@ namespace OpenFinHelloDotNet
         {
 
             Console.WriteLine("Hello Dot Net World");
-           
 
             var runtimeOptions = new RuntimeOptions
             {
@@ -33,9 +32,7 @@ namespace OpenFinHelloDotNet
                 var application = runtime.CreateApplication(appOptions);
                 application.run((a) =>
                 {
-
-                 Console.WriteLine("OpenFin app started.");
-            
+                    Console.WriteLine("OpenFin app started.");
                 },
                 (n) =>
                 {

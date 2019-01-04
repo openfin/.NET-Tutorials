@@ -8,23 +8,21 @@ namespace OpenFinHelloDotNet
     static void Main(string[] args)
     {
 
-      Console.WriteLine("Hello Dot Net World");
+        Console.WriteLine("Hello Dot Net World");
 
+        var runtimeOptions = new RuntimeOptions
+        {
+            Version = "stable"
+        };
 
-     var runtimeOptions = new RuntimeOptions
-      {
-        Version = "stable"
-      };
+        var runtime = Runtime.GetRuntimeInstance(runtimeOptions);
 
-     var runtime = Runtime.GetRuntimeInstance(runtimeOptions);
+        runtime.Connect(() =>
+        {
+            Console.WriteLine("The runtime has now connected.");
+        });
 
-           
-     runtime.Connect(() =>
-    {
-      Console.WriteLine("The runtime has now connected.");
-    });
-
-      Console.Read();
+        Console.Read();
 
     }
   }
