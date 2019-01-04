@@ -3,19 +3,22 @@
 
 ### Objective
 
-By the end of this tutorial you should be able to understand how the OpenFin .NET adapter is used to start and connect to an OpenFin Runtime instance from a .NET application.
+By the end of this tutorial you should be able to understand how the OpenFin .NET Adapter is used to start and connect to an OpenFin Runtime instance from a .NET application.
 
 ### Where to start
 
-Load the 'OpenFinHelloDotNet\OpenFinHelloDotNet.sln' project file in visual studio.  Select the Program.cs file from the solution explorer.
+Load the 'OpenFinHelloDotNet\OpenFinHelloDotNet.sln' project file in visual studio.  
+Select the Program.cs file from the solution explorer.
 
 ### What is happening?
 
-A basic example .NET console application is using the OpenFin .NET adapter to create an OpenFin Runtime instance which is then connected to.
+A basic example .NET console application is using the OpenFin .NET adapter to create an OpenFin Runtime instance.  Once the OpenFin process has started the .NET adapter connects to the Runtime and prints to the console upon completion.
 
 ### Under the hood
 
-- A `RuntimeOptions` Object is created to define parmeters which will be used to initialised the runtime.   Full deatils about the available options are available here: http://cdn.openfin.co/docs/csharp/latest/OpenfinDesktop/html/6A71B701.htm
+**Step 1**
+
+A `RuntimeOptions` Object is created to define parmeters which will be used to initialised the runtime.   
 
 In this example only the runtime version is specified:
 ```
@@ -26,13 +29,23 @@ var runtimeOptions = new RuntimeOptions
 ```
 In the example the OpenFin 'Stable' channel is specified ensuring the latest version of OpenFin is used.  In a production environment we recomend a static runtime version is configured to provide you with full control over when a new runtime version is used by your application, a list of OpenFin Runtime versions is available here: https://developer.openfin.co/versions/?product=Runtime.
 
-- To start an OpenFin runtime process the `Runtime.GetRuntimeInstance(GetRuntimeInstance)` method is called (http://cdn.openfin.co/docs/csharp/latest/OpenfinDesktop/html/E80A5D83.htm), with the RuntimeOptions object created in the step above.
+The `RuntimeOptions` documenation can be found here: http://cdn.openfin.co/docs/csharp/latest/OpenfinDesktop/html/6A71B701.htm
+
+**Step 2**
+
+A Runtime Object is created using the `Runtime.GetRuntimeInstance(GetRuntimeInstance)` method with the RuntimeOptions object created in the step above:
 
 ```
 var runtime = Runtime.GetRuntimeInstance(runtimeOptions);
 ```
 
-- Once the a runtime instance has been created the `Runtime.Connect()` method is used to connect the adapter to the runtime (http://cdn.openfin.co/docs/csharp/latest/OpenfinDesktop/html/F98A61F0.htm)
+When the Runtime object is constructed the .NET adapter will start openfun runtime processes (openfin.exe) on the local machine.
+
+The `Runtime.GetRuntimeInstance(GetRuntimeInstance)` documentation can be found here: http://cdn.openfin.co/docs/csharp/latest/OpenfinDesktop/html/E80A5D83.htm
+The `Runtime` class documentation can be found here: http://cdn.openfin.co/docs/csharp/latest/OpenfinDesktop/html/A0E038D5.htm
+
+**Step 3**
+The .NET adapter connects to the running OpenFin Runtime process by calling `Runtime.Connect()`:
 
 ```
 runtime.Connect(() =>
@@ -41,3 +54,5 @@ runtime.Connect(() =>
     });
 
 ```
+
+The `Runtime.Connect()`documentation can be found here: http://cdn.openfin.co/docs/csharp/latest/OpenfinDesktop/html/F98A61F0.htm
