@@ -22,9 +22,9 @@ A `RuntimeOptions` Object is created to define parameters which will be used to 
 In this example only the Runtime version is specified:
 ```
 var runtimeOptions = new RuntimeOptions
-    {
-        Version = "stable"
-    };
+{
+    Version = "stable"
+};
 ```
 In the example the OpenFin 'Stable' channel is specified ensuring the latest version of OpenFin is used.  In a production environment we recomend a static runtime version is configured to provide you with full control over when a new runtime version is used by your application, a list of OpenFin Runtime versions is available here: https://developer.openfin.co/versions/?product=Runtime.
 
@@ -48,9 +48,9 @@ The .NET adapter connects to the running OpenFin Runtime process by calling `Run
 
 ```
 runtime.Connect(() =>
-    {
-        Console.WriteLine("The runtime has now connected.");
-    });
+{
+    Console.WriteLine("The runtime has now connected.");
+});
 
 ```
 

@@ -1,7 +1,11 @@
 
-## Tutorial 04 Inter Application Bus 
+## Tutorial 03 Inter Application Bus 
 
-This tutorial shows how to use the inter-application bus within the .NET adapter.  Here we will run through a simple example of subscribing to a topic and sending a message out to another application.
+### Objective
+
+The OpenFin inter-application bus allows Web Applications running on the OpenFin platform to comunicate over a local comunication bus.  A .NET application is also able to comunicate with Web Applications running on OpenFin via the .NET adapter.
+
+By the end of this tutorial you will be able to use acess inter-application bus via the .NET adapter.  Here we will run through a simple example of subscribing to a topic and sending a message out to another application.
 
 **1st Step**
 
@@ -10,12 +14,13 @@ By now you should be familiar with some of the calls within the .NET Adapter.  S
 Below shows how to use the Inter-Application Bus to subscribe a Topic named `OpenFinTopic`, any message that is published to this topic will be displayed in the console.
 
 ```
-    runtime.Connect(() =>
-            {
-                InterApplicationBus.Subscription<string>(runtime, "OpenFinTopic").MessageReceived += (s, e) =>
-                {
-                    Console.WriteLine(e.Message);
-                };
+runtime.Connect(() =>
+{
+    InterApplicationBus.Subscription<string>(runtime, "OpenFinTopic").MessageReceived += (s, e) =>
+    {
+        Console.WriteLine(e.Message);
+    };
+}
 ```
 
 **2nd Step**
