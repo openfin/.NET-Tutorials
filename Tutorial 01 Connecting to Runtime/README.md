@@ -1,5 +1,4 @@
-
-## Tutorial 01 Connecting to the runtime
+## Tutorial 01 Connecting to the OpenFin Runtime
 
 ### Objective
 
@@ -18,9 +17,9 @@ A basic example .NET console application is using the OpenFin .NET adapter to cr
 
 **Step 1**
 
-A `RuntimeOptions` Object is created to define parmeters which will be used to initialised the runtime.   
+A `RuntimeOptions` Object is created to define parameters which will be used to initialised the Runtime.   
 
-In this example only the runtime version is specified:
+In this example only the Runtime version is specified:
 ```
 var runtimeOptions = new RuntimeOptions
     {
@@ -29,7 +28,7 @@ var runtimeOptions = new RuntimeOptions
 ```
 In the example the OpenFin 'Stable' channel is specified ensuring the latest version of OpenFin is used.  In a production environment we recomend a static runtime version is configured to provide you with full control over when a new runtime version is used by your application, a list of OpenFin Runtime versions is available here: https://developer.openfin.co/versions/?product=Runtime.
 
-The `RuntimeOptions` documenation can be found here: http://cdn.openfin.co/docs/csharp/latest/OpenfinDesktop/html/6A71B701.htm
+The `RuntimeOptions` documentation can be found here: http://cdn.openfin.co/docs/csharp/latest/OpenfinDesktop/html/6A71B701.htm
 
 **Step 2**
 
@@ -39,7 +38,7 @@ A Runtime Object is created using the `Runtime.GetRuntimeInstance(GetRuntimeInst
 var runtime = Runtime.GetRuntimeInstance(runtimeOptions);
 ```
 
-When the Runtime object is constructed the .NET adapter will start openfun runtime processes (openfin.exe) on the local machine.
+When the Runtime object is constructed the .NET adapter will start the OpenFin Runtime processes (openfin.exe) on the local machine.
 
 The `Runtime.GetRuntimeInstance(GetRuntimeInstance)` documentation can be found here: http://cdn.openfin.co/docs/csharp/latest/OpenfinDesktop/html/E80A5D83.htm
 The `Runtime` class documentation can be found here: http://cdn.openfin.co/docs/csharp/latest/OpenfinDesktop/html/A0E038D5.htm
