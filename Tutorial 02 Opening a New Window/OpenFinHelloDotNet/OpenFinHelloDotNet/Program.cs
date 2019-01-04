@@ -14,7 +14,7 @@ namespace OpenFinHelloDotNet
 
             var runtimeOptions = new RuntimeOptions
             {
-                Version = "9.61.34.25"
+                Version = "stable"
             };
 
             var runtime = Runtime.GetRuntimeInstance(runtimeOptions);
@@ -24,25 +24,24 @@ namespace OpenFinHelloDotNet
 
                 Console.WriteLine("The runtime has now connected.");
 
-                var appOptions = new ApplicationOptions("application-name", "application-uuid", "https://www.google.com");
+                var appOptions = new ApplicationOptions("application-name", "application-uuid", "http://cdn.openfin.co/demos/openfin-explorer/index.html");
 
                 appOptions.MainWindowOptions.AutoShow = true;
-                appOptions.MainWindowOptions.Frame = true;
-                appOptions.MainWindowOptions.Resizable = true;
-                appOptions.MainWindowOptions.Name = "Test Window";
+                appOptions.MainWindowOptions.DefaultHeight = 850;
+                appOptions.MainWindowOptions.DefaultWidth = 850;
 
                 var application = runtime.CreateApplication(appOptions);
                 application.run((a) =>
                 {
 
-                 Console.WriteLine("app started.");
+                 Console.WriteLine("OpenFin app started.");
             
                 },
                 (n) =>
                 {
                 });
             });
-                 Console.Read();
+            Console.Read();
         }
 
   }
