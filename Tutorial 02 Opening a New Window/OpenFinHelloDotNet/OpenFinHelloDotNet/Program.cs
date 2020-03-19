@@ -14,7 +14,7 @@ namespace OpenFinHelloDotNet
 
             var runtimeOptions = new RuntimeOptions
             {
-                Version = "9.61.34.25"
+                Version = "10.66.39.43"
             };
 
             var runtime = Runtime.GetRuntimeInstance(runtimeOptions);
@@ -30,6 +30,12 @@ namespace OpenFinHelloDotNet
                 appOptions.MainWindowOptions.Frame = true;
                 appOptions.MainWindowOptions.Resizable = true;
                 appOptions.MainWindowOptions.Name = "Test Window";
+                appOptions.MainWindowOptions.ContextMenu = true;
+                appOptions.MainWindowOptions.AcceleratorKeys = new AcceleratorKeyOptions
+                {
+                   Zoom = true
+                };
+             
 
                 var application = runtime.CreateApplication(appOptions);
                 application.run((a) =>
