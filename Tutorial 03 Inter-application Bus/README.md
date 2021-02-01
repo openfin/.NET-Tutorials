@@ -1,5 +1,5 @@
 
-## Tutorial 04 Inter Application Bus 
+## Tutorial 03 Inter Application Bus 
 
 This tutorial shows how to use the inter-application bus within the .NET adapter.  Here we will run through a simple example of subscribing to a topic and sending a message out to another application.
 
