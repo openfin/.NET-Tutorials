@@ -1,35 +1,64 @@
 
-## Tutorial 03 Inter Application Bus 
+## Tutorial 04 Using the EmbeddedView 
 
-This tutorial shows how to use the inter-application bus within the .NET adapter.  Here we will run through a simple example of subscribing to a topic and sending a message out to another application.
+This is an example of how to use the EmbeddedView. The application is pretending to be a simple browser, with the address bar, back and forward buttons rendered in the WPF application, while the main web content is rendered inside the EmbeddedView. We leverage the concept of Pre-load scripts to add the logic
 
-**1st Step**
+1) Install the missing nuget packages.
+2) Build and run the app.
 
-By now you should be familiar with some of the calls within the .NET Adapter.  Specifically here we can use `runtime.Connect` to subscribe to a Topic, and print out any messages sent to this topic within the console.
+**Points of interest**
+Have a look at the MainWindow.xaml.cs, the 3 main points are initialising the runtime, initialising the EmbeddedView and finally the code to create a communication channel between the WPF application and the Javascript running inside the EmbeddedView. 
 
-Below shows how to use the Inter-Application Bus to subscribe a Topic named `OpenFinTopic`, any message that is published to this topic will be displayed in the console.
+For the runtime initialisation, notice this is where we set the version of the OpenFin runtime that we'd like to run on top of. We also have a Connect callback, which will fire when we've established a connection.
 
 ```
-    runtime.Connect(() =>
-            {
-                InterApplicationBus.Subscription<string>(runtime, "OpenFinTopic").MessageReceived += (s, e) =>
-                {
-                    Console.WriteLine(e.Message);
-                };
+    this.runtimeOptions = new RuntimeOptions
+    {
+        Version = "18.87.55.19"
+    };
+
+    this.runtime = Runtime.GetRuntimeInstanceruntimeOptions);
+    runtime.Connect(async () =>
+    {
+        // More things to do once we're connected...
+    });
+```
+Secondly, we initialise the EmbeddedView instance that's being rendered within the MainWindow.xaml file. One interesting point here is that we are leveraging the preload scripts property. 
+
+Javascript files that are passed into this List<PreloadScript> will be downloaded and automatically run, each and every time the window is loaded inside the EmbeddedView. By loaded, I don't mean when the control is rendered inside the WPF application, I mean when the EmbeddedView, window content is loaded.
+
+```
+    this.StartingUrl = "http://www.google.com";
+    var appOptions = new ApplicationOptions"channel-api-wpf-demo",
+        "embedded-react-app",
+        this.startingUrl);
+
+    appOptions.MainWindowOptions.reloadScripts = new List<PreloadScript>();
+
+    var preloadScript = Path.CombineEnvironment.CurrentDirectory, preload-scripts", "navigator.js");
+    
+    appOptions.MainWindowOptions.reloadScripts.Add(new PreloadScriptpreloadScript, false));
+    
+    this.OpenFinEmbeddedView.Initialize(this.untimeOptions, appOptions);
+    
+    this.OpenFinEmbeddedView.Ready += penFinEmbeddedView_Ready;
 ```
 
-**2nd Step**
+Finally, we create connections to the pre-load script using our channel API, which will allow us to control the loaded content of our EmbeddedView...
 
-To publish a message to the topic `OpenFinTopic` we can create another application to publish a message.
+```
+    try
+    {
+        this.channel = runtime.InterApplicationBus.Channel.CreateProvider(this.uniqueChannelId);
+        channel.ClientConnected += Channel_ClientConnected;
+        channel.ClientDisconnected += Channel_ClientDisconnected; ;
+        await this.channel.OpenAsync();
+        Console.WriteLine("Client channel connected");
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e);
+    }
+```
 
->Task: Create a new application that will publish a test message to the `OpenFinTopic`.
-
-**3rd Step**
-
-Once you have created an application you can publish a message to the given topic, the code within your application could look something like this:
-
-`fin.desktop.InterApplicationBus.publish("OpenFinTopic","My Message");`
-
-> Tips: Try [creating an application](http://cdn.openfin.co/jsdocs/beta/tutorial-application.constructor.html) programmaticaly through the dev console. 
-
-After you have published the message to the topic, you should be able to see the message within your console application.
+Have a play around, see what's possible...!
