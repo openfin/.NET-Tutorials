@@ -1,0 +1,10 @@
+﻿<Application x:Class="EmbeddedView.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <FontFamily x:Key="FontAwesomeRegular">/fonts/Font Awesome 6 Free-Regular-400.otf#Font Awesome 6 Free</FontFamily>
+        <FontFamily x:Key="FontAwesomeSolid">/fonts/Font Awesome 6 Free-Solid-900.otf#Font Awesome 6 Free Solid</FontFamily>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+    </Application.Resources>
+</Application>
